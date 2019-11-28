@@ -104,6 +104,9 @@ class ServerlessCustomDomain {
                 `Custom domain ${this.givenDomainName} was created.
             New domains may take up to 40 minutes to be initialized.`,
             );
+            if (this.serverless.service.custom.customDomain.showTargetDomainName) {
+              this.serverless.cli.log(`Target domain name: ${domainInfo.domainName}`);
+            }
         } else {
             this.serverless.cli.log(`Custom domain ${this.givenDomainName} already exists.`);
         }

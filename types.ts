@@ -13,6 +13,7 @@ export interface ServerlessInstance { // tslint:disable-line
         }
         custom: {
             customDomain: {
+                showTargetDomainName: boolean | undefined,
                 domainName: string,
                 basePath: string | undefined,
                 stage: string | undefined,
